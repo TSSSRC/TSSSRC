@@ -1,0 +1,9 @@
+package src.scoringsystem;
+
+public class Test
+{
+	void blahblah()
+	{
+		
+	}
+}

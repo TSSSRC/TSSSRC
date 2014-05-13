@@ -1,0 +1,11 @@
+package src.scoringsystem;
+
+public class testclient
+{
+	GameClient gc = new GameClient(ipA, p, name, password);
+	public static void main()
+	{
+		
+	}
+	 
+}

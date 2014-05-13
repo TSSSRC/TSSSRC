@@ -1,0 +1,10 @@
+package src.scoringsystem;
+
+public class testclient
+{
+	public static void main()
+	{
+		
+	}
+	
+}

@@ -1,0 +1,50 @@
+package net.window;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+
+public class MainWindow
+{
+	
+	private JFrame frame;
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args)
+	{
+		EventQueue.invokeLater(new Runnable()
+		{
+			public void run()
+			{
+				try
+				{
+					MainWindow window = new MainWindow(args);
+					window.frame.setVisible(true);
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	/**
+	 * Create the application.
+	 */
+	public MainWindow(JFrame frame)
+	{
+		initialize(frame);
+	}
+	
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize(JFrame newFrame)
+	{
+		frame = newFrame;
+	}
+	
+}

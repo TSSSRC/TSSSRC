@@ -1,0 +1,12 @@
+package src.scoringsystem;
+
+public class testclient
+{
+	public static GameClient gc = new GameClient("196.249.10.29", 2406, "bob", "1234");
+	public static DataPackage dp = new DataPackage();
+	public static void main()
+	{
+		gc.
+	}
+	 
+}

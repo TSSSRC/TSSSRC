@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="net.util.TextUtil"/>
+<fullyQualifiedTypeName name="net.util.TextUtil.Convert"/>
+<fullyQualifiedTypeName name="javax.swing.JWindow"/>
+<fullyQualifiedTypeName name="net.Main"/>
+<fullyQualifiedTypeName name="net.frames.admin.AdminFrame"/>
+<fullyQualifiedTypeName name="net.frames.login.LoginActions"/>
+<fullyQualifiedTypeName name="net.frames.login.LoginFrame"/>
+<fullyQualifiedTypeName name="net.util.ProgramUtil"/>
+<fullyQualifiedTypeName name="android.app.Fragment"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="src.scoringsystem.GameClient"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.GCMParameterSpec"/>
+<fullyQualifiedTypeName name="src.scoringsystem.DataPackage"/>
+</qualifiedTypeNameHistroy>

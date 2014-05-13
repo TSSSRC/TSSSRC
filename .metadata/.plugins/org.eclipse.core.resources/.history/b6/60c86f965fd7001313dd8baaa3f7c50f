@@ -1,0 +1,9 @@
+package net.frames.login;
+
+public class LoginActions
+{
+	public static boolean Login()
+	{
+		
+	}
+}

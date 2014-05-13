@@ -1,0 +1,16 @@
+package net.util;
+
+public class TextUtil
+{
+	public class Convert
+	{
+		public String toString(char[] array)
+		{
+			String finalString = "";
+			for(char a : array)
+			{
+				finalString += a;
+			}
+		}
+	}
+}
