@@ -1,0 +1,13 @@
+package net;
+
+import net.window.MainWindow;
+
+public class ScoringSystem
+{
+	MainWindow main = new MainWindow();
+	
+	public ScoringSystem()
+	{
+		main.main(null);
+	}
+}

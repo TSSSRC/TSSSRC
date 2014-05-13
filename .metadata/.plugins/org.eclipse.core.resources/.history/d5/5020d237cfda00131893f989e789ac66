@@ -1,0 +1,20 @@
+package src.scoringsystem.database;
+
+import src.scoringsystem.database.models.DataBaseModel;
+
+public class Database
+{
+	public static void readFromDatabase()
+	{
+		
+	}
+
+	public static void writeToDatabase(DataBaseModel model)
+    {
+		KeySet obj = model.getModel().keySet()
+		while(obj != null)
+		{
+			
+		}
+    }
+}

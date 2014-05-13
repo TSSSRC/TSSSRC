@@ -1,0 +1,35 @@
+package src.scoringsystem.database.models;
+
+public class DataBaseModelBasic
+{
+	private String Name;
+	private String Surname;
+	/**
+	 * @return the name
+	 */
+    public String getName()
+    {
+	    return Name;
+    }
+	/**
+	 * @param name the name to set
+	 */
+    public void setName(String name)
+    {
+	    Name = name;
+    }
+	/**
+	 * @return the surname
+	 */
+    public String getSurname()
+    {
+	    return Surname;
+    }
+	/**
+	 * @param surname the surname to set
+	 */
+    public void setSurname(String surname)
+    {
+	    Surname = surname;
+    }
+}

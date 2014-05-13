@@ -1,0 +1,9 @@
+package src.scoringsystem.database.models;
+
+public class DataBaseModel
+{
+	public DataBaseModel()
+	{
+		
+	}
+}

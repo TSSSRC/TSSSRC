@@ -1,0 +1,17 @@
+package src.scoringsystem.server;
+
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class Server
+{
+    public static int port = 2406;
+    public static String ip = "";
+    public static String ipAddress;
+    public static InetSocketAddress insa;
+    public static ServerSocket server;
+    public static ArrayList<Socket> socketList = new ArrayList<Socket>();
+    public static ArrayList<Integer> stateList = new ArrayList<Integer>();
+}

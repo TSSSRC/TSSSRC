@@ -1,0 +1,13 @@
+package src.scoringsystem.network.packages;
+
+
+public class LoginPackage extends DataPackage
+{
+	public LoginPackage(String Username, String Password)
+	{
+		super();
+		this.addBaseObject("username", Username);
+		this.addBaseObject("password", Password);
+		this.getBaseDataObject(Username);
+	}
+}

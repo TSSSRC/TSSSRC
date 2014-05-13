@@ -4,9 +4,11 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
+import net.window.frames.login.LoginFrame;
+
 public class MainWindow
 {
-	
+	public static MainWindow window;
 	private JFrame frame;
 	
 	/**
@@ -20,7 +22,7 @@ public class MainWindow
 			{
 				try
 				{
-					MainWindow window = new MainWindow();
+					window = new MainWindow();
 					window.frame.setVisible(true);
 				}
 				catch (Exception e)
@@ -36,17 +38,18 @@ public class MainWindow
 	 */
 	public MainWindow()
 	{
-		initialize();
+		initialize(new LoginFrame());
 	}
 	
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize()
-	{
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+	private void initialize(JFrame jframe)
+	{		
+		frame = jframe;
+		//frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.frame.setEnabled(true);
 	}
 	
 }

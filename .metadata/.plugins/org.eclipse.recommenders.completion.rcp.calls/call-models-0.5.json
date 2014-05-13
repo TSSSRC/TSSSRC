@@ -19,5 +19,15 @@
     "location": "X:\\Coding\\Trampoline\\ScoringSystem\\ScoringSystemLogic\\src.scoringsystem",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027X:\\Coding\\Trampoline\\ScoringSystem\\ScoringSystemLogic\\src.scoringsystem\u0027. Skipped."
+  },
+  "X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemLogic\\src.scoringsystem": {
+    "location": "X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemLogic\\src.scoringsystem",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemLogic\\src.scoringsystem\u0027. Skipped."
+  },
+  "X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemJava\\src": {
+    "location": "X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemJava\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemJava\\src\u0027. Skipped."
   }
 }

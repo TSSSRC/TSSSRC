@@ -1,0 +1,18 @@
+package src.scoringsystem.network;
+
+
+
+public class Response
+{
+	public enum SocketResponse
+	{
+		SUCCESSFULL(1);
+		
+		private SocketResponse(int i)
+		{
+			
+		}
+	}
+	
+
+}

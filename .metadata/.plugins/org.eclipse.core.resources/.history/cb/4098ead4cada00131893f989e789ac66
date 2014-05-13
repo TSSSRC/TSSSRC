@@ -1,0 +1,20 @@
+package src.scoringsystem.network.packages;
+
+public class JudgeScorePackage extends DataPackage
+{
+	public JudgeScorePackage(int ID, double score)
+	{
+		super();
+		this.addBaseObject("id", score);
+	}
+	
+	public int test()
+	{
+		return 0;
+	}
+	
+	public String test()
+	{
+		return "";
+	}
+}

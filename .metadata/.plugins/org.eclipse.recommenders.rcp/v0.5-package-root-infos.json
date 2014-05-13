@@ -13,6 +13,19 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "android-support-v4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5896b0a4e377ac4242eb2bc785220c1c4fc052f4",
+    "jarFileModificationDate": "2014-05-13T08:28:30.436+02:00",
+    "location": "X:\\Coding\\Trampoline\\ScoringSystem\\TSSSRC\\ScoringSystemAndroid\\libs\\android-support-v4.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
@@ -37,19 +50,6 @@
     "jarFileModificationDate": "2013-04-20T16:27:12.514+02:00",
     "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\access-bridge-64.jar",
     "javaRuntime": true
-  },
-  {
-    "symbolicName": "android-support-v4",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "5896b0a4e377ac4242eb2bc785220c1c4fc052f4",
-    "jarFileModificationDate": "2014-05-13T08:28:30.436+02:00",
-    "location": "X:\\Coding\\Trampoline\\ScoringSystem\\ScoringSystemAndroid\\libs\\android-support-v4.jar",
-    "javaRuntime": false
   },
   {
     "symbolicName": "jre",

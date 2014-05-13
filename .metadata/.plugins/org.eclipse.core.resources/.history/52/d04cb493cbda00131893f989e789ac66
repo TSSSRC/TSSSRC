@@ -1,0 +1,10 @@
+package src.scoringsystem.network.packages;
+
+public class DiffJudgePackage extends DataPackage
+{
+	public DiffJudgePackage()
+	{
+		super();
+		this.setDataPackageType(DataPackageType.DiffJudge)
+	}
+}

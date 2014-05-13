@@ -1,0 +1,7 @@
+package src.scoringsystem.database.models;
+
+public class DataBaseModelBasic
+{
+	private String Name;
+	private String Surname;
+}

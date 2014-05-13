@@ -1,0 +1,6 @@
+package src.scoringsystem.network.packages;
+
+public class LoginPackage
+{
+	
+}

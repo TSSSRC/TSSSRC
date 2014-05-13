@@ -1,0 +1,6 @@
+package src.scoringsystem.network;
+
+public enum SocketResponses
+{
+	
+}

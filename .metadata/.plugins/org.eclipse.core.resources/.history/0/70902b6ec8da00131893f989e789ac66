@@ -1,0 +1,52 @@
+package src.scoringsystem.network.packages;
+
+import java.util.HashMap;
+
+public class DataPackage
+{
+	
+	public static HashMap<String, Object> baseDataMap = new HashMap<String, Object>();
+	public static HashMap<String, Object> extraDataMap = new HashMap<String, Object>();
+	
+	
+	//Logic
+	/**
+	 * Adds an object to the DataPackage
+	 * @param Key 
+	 * @param obj the object
+	 * @return true if added
+	 */
+	public boolean addBaseObject(String Key, Object obj)
+	{
+		baseDataMap.put(Key, obj);
+		return true;
+	}
+	
+	public Object getBaseDataObject(String Key)
+	{
+		if(this.getBaseData().get(Key))
+		{
+			
+		}
+	}
+	
+	//Getters
+	
+	/**
+	 * @return Base Data in DataPackage
+	 */
+	public HashMap<String, Object> getBaseData()
+	{
+		return baseDataMap;
+	}
+	
+	/**
+	 * @return Extra Data in DataPackage
+	 */
+	public HashMap<String, Object> getExtraData()
+	{
+		return extraDataMap;
+	}
+	
+	//Setters
+}

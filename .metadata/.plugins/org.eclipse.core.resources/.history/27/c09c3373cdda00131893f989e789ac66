@@ -1,0 +1,25 @@
+package src.scoringsystem.network;
+
+public class Response
+{
+	public enum SocketResponse
+	{
+		SUCCESSFULL(1);
+		
+		
+		
+		
+	    private final int value;
+		private SocketResponse(int i)
+		{
+	        this.value = value;
+	    }
+
+	    public int getValue() {
+	        return value;
+	    }
+		
+	}
+	
+
+}

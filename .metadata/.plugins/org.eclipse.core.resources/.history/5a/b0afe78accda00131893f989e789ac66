@@ -1,0 +1,6 @@
+package src.scoringsystem.network;
+
+public class SocketResponses
+{
+	public static int SUCCESSFULL = 0;
+}

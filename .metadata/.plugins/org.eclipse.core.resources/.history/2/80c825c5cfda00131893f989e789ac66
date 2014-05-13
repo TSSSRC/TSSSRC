@@ -1,0 +1,32 @@
+package src.scoringsystem.database;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.omg.CORBA.FREE_MEM;
+
+import src.scoringsystem.database.models.DataBaseModel;
+
+public class Database
+{
+	public static void readFromDatabase()
+	{
+		
+	}
+
+	public static void writeToDatabase(DataBaseModel model)
+    {
+		Set<String> set = model.getModel().keySet();
+		Iterator<String> it = set.iterator();
+		while(it.hasNext())
+		{
+			String key = it.next();			
+			writeToDatabase(key, model.getModel().get(key));
+		}
+    }
+	
+	public static void writeToDatabase(String column, Object value)
+    {
+		
+    }
+}
