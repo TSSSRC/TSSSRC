@@ -1,0 +1,8 @@
+package src.scoringsystem.network;
+
+import src.scoringsystem.network.Response.SocketResponse;
+
+public class Network
+{
+	SocketResponse s = SocketResponse.ERROR_FAILED;
+}

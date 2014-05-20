@@ -39,7 +39,7 @@ public class DataBaseModelHashMap
     	return (String)this.getModel().get("name");
     }
     
-    public String getSurName()
+    public String getSurname()
     {
     	return (String)this.getModel().get("surname");
     }

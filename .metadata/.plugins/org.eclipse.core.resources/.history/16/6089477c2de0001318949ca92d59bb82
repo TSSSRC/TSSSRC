@@ -1,0 +1,10 @@
+package net.util;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class KeyPad extends JPanel
+{
+	JButton btnNewButton = new JButton("New button");
+	panel.add(btnNewButton);
+}

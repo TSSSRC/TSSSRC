@@ -1,9 +1,0 @@
-package net.util;
-
-public class ProgramUtil
-{
-	public void exit()
-	{
-		if (JOptionPane.showConfirmDialog(contentPane, "Do you want to exit?") == 0) System.exit(0);
-	}
-}

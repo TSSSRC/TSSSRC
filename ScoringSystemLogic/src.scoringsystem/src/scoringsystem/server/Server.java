@@ -18,4 +18,6 @@ public class Server
     public static ArrayList<Socket> socketList = new ArrayList<Socket>();
     public static HashMap<Socket, Integer> socketState = new HashMap<Socket, Integer>();
     public static ArrayList<DataPackage> dataPackageList = new ArrayList<DataPackage>();
+    
+    
 }

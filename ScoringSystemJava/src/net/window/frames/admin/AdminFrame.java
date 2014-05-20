@@ -2,12 +2,17 @@ package net.window.frames.admin;
 
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import net.util.KeyPad;
 
 public class AdminFrame extends JFrame
 {
@@ -57,6 +62,19 @@ public class AdminFrame extends JFrame
 		lblAdmin.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblAdmin.setBounds(101, 0, 471, 91);
 		contentPane.add(lblAdmin);
+		
+		JButton button = new JButton("1");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
+		button.setBounds(58, 196, 52, 23);
+		contentPane.add(button);
+		
+		JPanel keypad = new KeyPad();
+		keypad.setLocation(249, 165);
+		contentPane.add(keypad);
 
 	}
 }

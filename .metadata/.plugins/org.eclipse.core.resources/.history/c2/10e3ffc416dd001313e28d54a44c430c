@@ -1,0 +1,8 @@
+package src.scoringsystem.network;
+
+import src.scoringsystem.network.Response.SocketResponse;
+
+public class Network
+{
+	
+}

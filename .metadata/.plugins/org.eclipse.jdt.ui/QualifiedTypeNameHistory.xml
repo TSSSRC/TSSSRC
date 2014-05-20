@@ -39,4 +39,6 @@
 <fullyQualifiedTypeName name="net.window.frames.admin.AdminFrame"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="net.window.frames.login.LoginFrame"/>
+<fullyQualifiedTypeName name="src.scoringsystem.network.Response.SocketResponse"/>
+<fullyQualifiedTypeName name="net.util.KeyPad"/>
 </qualifiedTypeNameHistroy>

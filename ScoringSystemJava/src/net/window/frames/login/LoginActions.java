@@ -3,8 +3,6 @@ package net.window.frames.login;
 import javax.swing.JOptionPane;
 
 import net.util.TextUtil;
-import net.window.MainWindow;
-import net.window.frames.admin.AdminFrame;
 
 public class LoginActions
 {
