@@ -3,7 +3,7 @@ package net.util;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class KeyPad1 extends JPanel
+public class KeyPad extends JPanel
 {
 	public KeyPad1()
 	{
