@@ -1,8 +1,0 @@
-package net.util;
-
-import javax.swing.JPanel;
-
-public class KeyPad extends JPanel
-{
-	
-}

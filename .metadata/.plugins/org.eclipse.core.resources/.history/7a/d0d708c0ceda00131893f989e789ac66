@@ -1,9 +1,0 @@
-package src.scoringsystem.database;
-
-public class Database
-{
-	public static readFromDatabase()
-	{
-		
-	}
-}

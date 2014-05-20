@@ -1,6 +1,0 @@
-package src.scoringsystem.network;
-
-public enum SocketResponse<Integer>
-{
-	SUCCESSFULL = 1, 
-}

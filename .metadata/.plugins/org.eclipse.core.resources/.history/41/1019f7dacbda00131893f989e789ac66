@@ -1,9 +1,0 @@
-package src.scoringsystem.network.packages;
-
-public class TOFJudgePackage extends DataPackage
-{
-	public TOFJudgePackage()
-	{
-		
-	}
-}
