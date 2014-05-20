@@ -5,7 +5,7 @@ import javax.swing.JPanel;
 
 public class KeyPad extends JPanel
 {
-	public KeyPad1()
+	public KeyPad()
 	{
 		JButton btnNewButton = new JButton("New button1");
 		
