@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends Activity
@@ -29,7 +30,7 @@ public class DisplayMessageActivity extends Activity
 	    textView.setText(message);
 
 	    // Set the text view as the activity layout
-	    setContentView(textView);
+	    //addContentView(textView, new LayoutParams(LayoutParams.WRAP_CONTENT, 200));
 	}
 	
 	@Override
