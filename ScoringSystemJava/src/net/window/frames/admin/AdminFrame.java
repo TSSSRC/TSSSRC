@@ -70,6 +70,7 @@ public class AdminFrame extends JFrame
 		lblAdmin.setBounds(101, 0, 471, 91);
 		contentPane.add(lblAdmin);		
 		JPanel keypad = new KeyPad(((width-25)/3)*2, ((height)/4), ((width-50)/3), ((height-75)/4)*3);	
+		keypad.setLocation(412, 81);
 		
 		contentPane.add(keypad);
 		keypad.setLayout(null);

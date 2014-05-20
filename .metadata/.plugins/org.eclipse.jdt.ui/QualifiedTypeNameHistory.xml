@@ -41,4 +41,5 @@
 <fullyQualifiedTypeName name="net.window.frames.login.LoginFrame"/>
 <fullyQualifiedTypeName name="src.scoringsystem.network.Response.SocketResponse"/>
 <fullyQualifiedTypeName name="net.util.KeyPad"/>
+<fullyQualifiedTypeName name="com.scoringsystem.android.net.MainActivity"/>
 </qualifiedTypeNameHistroy>

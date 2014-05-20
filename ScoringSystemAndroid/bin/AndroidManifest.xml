@@ -38,6 +38,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.scoringsystem.android.net.MainActivity" />
         </activity>
+        <activity
+            android:name="com.scoringsystem.android.net.Failed"
+            android:label="@string/title_activity_failed" >
+        </activity>
     </application>
 
 </manifest>

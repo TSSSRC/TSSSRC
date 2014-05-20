@@ -2,34 +2,26 @@ package com.scoringsystem.android.net;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-public class DisplayMessageActivity extends Activity
+public class Failed extends Activity
 {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
-	    super.onCreate(savedInstanceState);
-
-	    // Get the message from the intent
-	    Intent intent = getIntent();
-	    String message = intent.getStringExtra("message");
-
-	    // Create the text view
-	    TextView textView = new TextView(this);
-	    textView.setTextSize(100);
-	    textView.setText(message);
-
-	    // Set the text view as the activity layout
-	    setContentView(textView);
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_failed);
+		
+		if (savedInstanceState == null)
+		{
+			getFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragment()).commit();
+		}
 	}
 	
 	@Override
@@ -37,7 +29,7 @@ public class DisplayMessageActivity extends Activity
 	{
 		
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.display_message, menu);
+		getMenuInflater().inflate(R.menu.failed, menu);
 		return true;
 	}
 	
@@ -50,8 +42,7 @@ public class DisplayMessageActivity extends Activity
 		int id = item.getItemId();
 		if (id == R.id.action_settings)
 		{
-			Intent intent = new Intent(this, MainActivity.class);
-		    startActivity(intent);
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -69,10 +60,9 @@ public class DisplayMessageActivity extends Activity
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			View rootView = inflater.inflate(R.layout.fragment_display_message, container, false);
+			View rootView = inflater.inflate(R.layout.fragment_failed, container, false);
 			return rootView;
 		}
 	}
-
 	
 }

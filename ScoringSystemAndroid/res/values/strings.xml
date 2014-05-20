@@ -10,4 +10,6 @@
     <string name="action_settings2">Settings2</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>
+    <string name="title_activity_failed">Failed</string>
+
 </resources>
