@@ -2,6 +2,7 @@ package net.window.frames.admin;
 
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +14,10 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import net.util.KeyPad;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import javax.swing.BoxLayout;
 
 public class AdminFrame extends JFrame
 {
@@ -22,6 +27,8 @@ public class AdminFrame extends JFrame
 	 */
     private static final long serialVersionUID = 4638510630518996374L;
 	private JPanel contentPane;
+	private int width=680;
+	private int height = 480;
 	
 	/**
 	 * Launch the application.
@@ -51,7 +58,7 @@ public class AdminFrame extends JFrame
 	public AdminFrame()
 	{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 680, 480);
+		setBounds(100, 100, width, height);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -61,20 +68,11 @@ public class AdminFrame extends JFrame
 		lblAdmin.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAdmin.setFont(new Font("Tahoma", Font.PLAIN, 24));
 		lblAdmin.setBounds(101, 0, 471, 91);
-		contentPane.add(lblAdmin);
+		contentPane.add(lblAdmin);		
+		JPanel keypad = new KeyPad(((width-25)/3)*2, ((height)/4), ((width-50)/3), ((height-75)/4)*3);	
 		
-		JButton button = new JButton("1");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				
-			}
-		});
-		button.setBounds(58, 196, 52, 23);
-		contentPane.add(button);
-		
-		JPanel keypad = new KeyPad();
-		keypad.setLocation(249, 165);
 		contentPane.add(keypad);
+		keypad.setLayout(null);
 
 	}
 }
