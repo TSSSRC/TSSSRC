@@ -4,11 +4,9 @@ import java.awt.Color;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
-
 public class KeyPad extends JPanel
-<<<<<<< HEAD
+
 {	
 	
 	public KeyPad(int xPos, int yPos, int width, int height)
@@ -54,19 +52,6 @@ public class KeyPad extends JPanel
 		
 		
 	}	
-	
-=======
-{
-	public KeyPad()
-	{
-		JButton btnNewButton = new JButton("New button1");
-		JButton btnNewButton2 = new JButton("New button2");
-		
-		btnNewButton.setBounds(58, 196, 52, 23);
-		btnNewButton2.setBounds(58, 56, 152, 23);
-		this.add(btnNewButton);
-		this.add(btnNewButton2);
-		this.setBounds(311, 141, 239, 160);
-	}
->>>>>>> b282a926114238fa9f63376fd89246ccb6c2cbc6
+
 }
+	
