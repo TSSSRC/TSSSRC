@@ -12,6 +12,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import net.util.KeyPad;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
 
 public class AdminFrame extends JFrame
 {
@@ -21,8 +23,11 @@ public class AdminFrame extends JFrame
 	 */
     private static final long serialVersionUID = 4638510630518996374L;
 	private JPanel contentPane;
+	static AdminFrame frame;
 	private int width=680;
 	private int height = 480;
+	int xChange = 0;
+	int yChange = 0;
 	
 	/**
 	 * Launch the application.
@@ -35,7 +40,7 @@ public class AdminFrame extends JFrame
 			{
 				try
 				{
-					AdminFrame frame = new AdminFrame();
+					frame = new AdminFrame();
 					frame.setVisible(true);
 				}
 				catch (Exception e)
@@ -59,12 +64,11 @@ public class AdminFrame extends JFrame
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		final JPanel keypad = new KeyPad(414, 25, 300, 200);
-		keypad.setSize(320, 316);
-		keypad.setLocation(334, 114);
+		final JPanel keypad = new KeyPad(width, height);		
 		
 		
-		contentPane.add(keypad);
+		
+		contentPane.add(keypad);	
 		keypad.setLayout(null);
 		
 		JLabel lblAdmin = new JLabel("Admin");
@@ -75,13 +79,12 @@ public class AdminFrame extends JFrame
 
 		addComponentListener(new ComponentAdapter() {
 			@Override
-			public void componentResized(ComponentEvent e) {
-				if(e.getComponent() instanceof JFrame)
-				{
-					int width = contentPane.getWidth() - e.getComponent().getWidth();
-					int height = contentPane.getHeight() - e.getComponent().getHeight();
-					((KeyPad)keypad).resizeButtons(width, height);
-				}
+			public void componentResized(ComponentEvent e){
+				
+				width = frame.getWidth();
+				height = frame.getHeight();
+				//System.out.println("Width: "+ width+ " Height: " + height);
+				((KeyPad)(keypad)).resizePanel(width, height);
 			}
 		});
 		

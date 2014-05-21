@@ -51,4 +51,6 @@
 <fullyQualifiedTypeName name="com.scoringsystem.android.net.MainActivity"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.border.LineBorder"/>
 </qualifiedTypeNameHistroy>
