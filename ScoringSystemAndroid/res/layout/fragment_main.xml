@@ -9,46 +9,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-        <EditText
-            android:id="@+id/edit_message"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="24dp"
-            android:ems="10"
-            android:enabled="false"
-            android:focusableInTouchMode="false"
-            android:inputType="none" />
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:enabled="false"
+        android:focusableInTouchMode="false"
+        android:inputType="none" />
 
-        <Button
-            android:id="@+id/but1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/edit_message"
-            android:onClick="addToText"
-            android:tag="1"
-            android:text="@string/button_one" />
+    <Button
+        android:id="@+id/but1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/edit_message"
+        android:onClick="addToText"
+        android:tag="1"
+        android:text="@string/button_one" />
 
-        <Button
-            android:id="@+id/butBack"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/but1"
-            android:layout_marginTop="12dp"
-            android:onClick="addToText"
-            android:tag="2"
-            android:text="@string/button_two" />
+    <Button
+        android:id="@+id/butBack"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/but1"
+        android:layout_marginTop="12dp"
+        android:onClick="addToText"
+        android:tag="2"
+        android:text="@string/button_two" />
 
-        <Button
-            android:id="@+id/ButtonSubmit"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:onClick="sendMessage"
-            android:text="@string/button_two" />
+    <Button
+        android:id="@+id/ButtonSubmit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="sendMessage"
+        android:text="@string/button_submit" />
 
 </RelativeLayout>

@@ -41,11 +41,14 @@
 <fullyQualifiedTypeName name="net.window.frames.login.LoginFrame"/>
 <fullyQualifiedTypeName name="src.scoringsystem.network.Response.SocketResponse"/>
 <fullyQualifiedTypeName name="net.util.KeyPad"/>
-<fullyQualifiedTypeName name="com.scoringsystem.android.net.MainActivity"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="android.widget.EditText"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
-<fullyQualifiedTypeName name="com.scoringsystem.android.net.R.id"/>
 <fullyQualifiedTypeName name="android.view.ViewGroup.LayoutParams"/>
 <fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.scoringsystem.android.net.R.id"/>
+<fullyQualifiedTypeName name="com.scoringsystem.android.net.R.layout"/>
+<fullyQualifiedTypeName name="com.scoringsystem.android.net.MainActivity"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 </qualifiedTypeNameHistroy>

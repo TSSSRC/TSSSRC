@@ -14,5 +14,6 @@
     <string name="button_one">1</string>
     <string name="button_two">2</string>
     <string name="button_done">Done</string>
+    <string name="button_submit">Finished</string>
 
 </resources>

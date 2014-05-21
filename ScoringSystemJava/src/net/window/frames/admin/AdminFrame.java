@@ -2,11 +2,9 @@ package net.window.frames.admin;
 
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.Frame;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -14,10 +12,6 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import net.util.KeyPad;
-import javax.swing.border.LineBorder;
-import java.awt.Color;
-import java.awt.FlowLayout;
-import javax.swing.BoxLayout;
 
 public class AdminFrame extends JFrame
 {
@@ -57,23 +51,39 @@ public class AdminFrame extends JFrame
 	 */
 	public AdminFrame()
 	{
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		setBounds(100, 100, width, height);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		final JPanel keypad = new KeyPad(414, 25, 300, 200);
+		keypad.setSize(320, 316);
+		keypad.setLocation(334, 114);
 		
-		JLabel lblAdmin = new JLabel("Admin");
-		lblAdmin.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAdmin.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblAdmin.setBounds(101, 0, 471, 91);
-		contentPane.add(lblAdmin);		
-		JPanel keypad = new KeyPad(((width-25)/3)*2, ((height)/4), ((width-50)/3), ((height-75)/4)*3);	
-		keypad.setLocation(412, 81);
 		
 		contentPane.add(keypad);
 		keypad.setLayout(null);
+		
+		JLabel lblAdmin = new JLabel("Admin");
+		lblAdmin.setBounds(75, 0, 471, 91);
+		contentPane.add(lblAdmin);
+		lblAdmin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAdmin.setFont(new Font("Tahoma", Font.PLAIN, 24));
 
+		addComponentListener(new ComponentAdapter() {
+			@Override
+			public void componentResized(ComponentEvent e) {
+				if(e.getComponent() instanceof JFrame)
+				{
+					int width = contentPane.getWidth() - e.getComponent().getWidth();
+					int height = contentPane.getHeight() - e.getComponent().getHeight();
+					((KeyPad)keypad).resizeButtons(width, height);
+				}
+			}
+		});
+		
 	}
 }

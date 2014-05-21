@@ -76,7 +76,7 @@ public class MainActivity extends Activity
 		EditText editText = (EditText) findViewById(R.id.edit_message);
 		String message = editText.getText().toString();
 		intent.putExtra("message", message);
-	    startActivity(intent);
+		startActivity(intent);
 	}
 	
 	public void addToText(View view)

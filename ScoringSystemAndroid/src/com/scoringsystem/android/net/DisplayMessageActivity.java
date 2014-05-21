@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends Activity
@@ -30,7 +29,7 @@ public class DisplayMessageActivity extends Activity
 	    textView.setText(message);
 
 	    // Set the text view as the activity layout
-	    //addContentView(textView, new LayoutParams(LayoutParams.WRAP_CONTENT, 200));
+	    setContentView(textView);
 	}
 	
 	@Override
@@ -38,6 +37,7 @@ public class DisplayMessageActivity extends Activity
 	{
 		
 		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.display_message, menu);
 		getMenuInflater().inflate(R.menu.display_message, menu);
 		return true;
 	}
@@ -51,7 +51,7 @@ public class DisplayMessageActivity extends Activity
 		int id = item.getItemId();
 		if (id == R.id.action_settings)
 		{
-			Intent intent = new Intent(this, MainActivity.class);
+			Intent intent = new Intent(this.getBaseContext(), MainActivity.class);
 		    startActivity(intent);
 		}
 		return super.onOptionsItemSelected(item);

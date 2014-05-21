@@ -57,6 +57,7 @@ public final class R {
         public static final int button_done=0x7f05000c;
         public static final int button_one=0x7f05000a;
         public static final int button_send=0x7f050003;
+        public static final int button_submit=0x7f05000d;
         public static final int button_two=0x7f05000b;
         public static final int edit_message=0x7f050002;
         public static final int hello_world=0x7f050001;
