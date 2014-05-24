@@ -2,6 +2,9 @@ package src.scoringsystem.network.packages;
 
 public class DiffJudgePackage extends DataPackage
 {
+	public DiffJudgePackage(){
+		super();
+	}
 	public DiffJudgePackage(int ID, double score)
 	{
 		super();

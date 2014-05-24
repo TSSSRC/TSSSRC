@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -21,13 +22,14 @@ public class Keypad extends JPanel
 	int _height;
 	
 	Object outputLocation;
+	static ArrayList<Double> totalScore = new ArrayList<Double>();
 	
-	public Keypad(int width, int height, Object outputLocation)
+	public Keypad(double width, double height, Object outputLocation)
 	{
-		_xPos = (width) * 2 / 3;
-		_yPos = (height) / 3;
-		_width = (width - 55) / 3;
-		_height = (height - 60) * 2 / 3;
+		_xPos =(int) ((double) (width *( (2.0 / 3.0))));
+		_yPos = (int) ((double)(height *(1.0/ 3.0)));
+		_width = (int) ((double)((width - 55) *(1.0/ 3.0)));
+		_height =(int) ((double) ((height - 60) * (2.0 / 3.0)));
 		this.setBounds(_xPos, _yPos, _width, _height);
 		this.outputLocation = outputLocation;
 		// this.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -93,14 +95,20 @@ public class Keypad extends JPanel
 	
 	public static void output(JButton but, Object outputLocation)
 	{
-		if (selected != null && selected instanceof JLabel)
+		if (selected != null && selected instanceof JLabelExt)
 		{
-			((JLabel) selected).setText(but.getText());
-			((JLabel)selected).setBorder(null);
+			((JLabelExt) selected).setText(but.getText());
+			totalScore.set(((JLabelExt) selected).getTag(),Double.parseDouble(but.getText()));
+			calcTotal();
+			((JLabelExt)selected).setBorder(null);
 			selected = null;
 			return;
 		}
-		JLabel label = new JLabel(but.getText());
+		
+		JLabelExt label = new JLabelExt(but.getText(),totalScore.size());
+		//System.out.println(Double.parseDouble(label.getText())+"");
+		totalScore.add(Double.parseDouble(label.getText()));
+		calcTotal();
 		label.addMouseListener(new MouseListener()
 		{
 			
@@ -129,7 +137,8 @@ public class Keypad extends JPanel
 			public void mouseClicked(MouseEvent arg0)
 			{
 				selected = arg0.getSource();
-				((JLabel)arg0.getSource()).setBorder(new LineBorder(new Color(0, 0, 0)));
+				((JLabelExt)arg0.getSource()).setBorder(new LineBorder(new Color(0, 0, 0)));
+				
 				
 			}
 			
@@ -154,20 +163,29 @@ public class Keypad extends JPanel
 			
 		}
 	}
+	private static void calcTotal(){
+		double total=0;
+		for(int i=0; i<totalScore.size(); i++){
+			//System.out.println(totalScore.get(i));
+			total+= totalScore.get(i);
+		}
+		total = (Math.round((total*10.0)))/10.0;
+		System.out.println(total+"");
+	}
 	
 	/**
 	 * @author Fabio
 	 * @param width
 	 * @param height
 	 */
-	public void resizePanel(int width, int height)
+	public void resizePanel(double width, double height)
 	{
 		try
 		{
-			_xPos = (width) * 2 / 3;
-			_yPos = (height) / 3;
-			_width = (width - 55) / 3;
-			_height = (height - 60) * 2 / 3;
+			_xPos =(int) ((double) (width *( (2.0 / 3.0))));
+			_yPos = (int) ((double)(height *(1.0/ 3.0)));
+			_width = (int) ((double)((width - 55) *(1.0/ 3.0)));
+			_height =(int) ((double) ((height - 60) * (2.0 / 3.0)));
 			setBounds(_xPos, _yPos, _width, _height);
 			int n = 0;
 			for (int row = 0; row < 5; row++)
@@ -222,7 +240,7 @@ public class Keypad extends JPanel
 		keypad.addButton("0.2", "");
 		keypad.addButton("0.3", "");
 		keypad.addButton("0.4", "");
-		keypad.addButton("0.5", "");
+		keypad.addButton("0.5", "");		
 		return keypad;
 	}
 	

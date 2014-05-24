@@ -2,6 +2,9 @@ package src.scoringsystem.network.packages;
 
 public class JudgeScorePackage extends DataPackage
 {
+	public JudgeScorePackage(){
+		super();
+	}
 	public JudgeScorePackage(int ID, double score)
 	{
 		super();

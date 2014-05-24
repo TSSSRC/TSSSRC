@@ -2,6 +2,9 @@ package src.scoringsystem.network.packages;
 
 public class TOFJudgePackage extends DataPackage
 {
+	public TOFJudgePackage(){
+		super();
+	}
 	public TOFJudgePackage(int ID, double score)
 	{
 		super();

@@ -2,6 +2,9 @@ package src.scoringsystem.network.packages;
 
 public class JudgeResetPackage extends DataPackage
 {
+	public JudgeResetPackage(){
+		super();
+	}
 	public JudgeResetPackage(boolean Reset)
 	{
 		super();

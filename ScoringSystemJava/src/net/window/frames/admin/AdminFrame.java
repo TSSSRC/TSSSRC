@@ -11,9 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
 import net.util.Keypad;
 import java.awt.FlowLayout;
+import java.awt.Color;
 
 public class AdminFrame extends JFrame
 {
@@ -65,8 +67,10 @@ public class AdminFrame extends JFrame
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(224, 104, 21, 208);
+		final JPanel panel = new JPanel();
+		panel.setBounds(getXpos(width,(2.0/3.0))-35, getYpos(height, (1.0/3.0)), 30, getHeight((height - 60) ,(2.0 / 3.0)));
+		
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
 		contentPane.add(panel);
 		
 		final JPanel keypad = Keypad.getJudgesKeypad(width, height, panel);
@@ -92,6 +96,15 @@ public class AdminFrame extends JFrame
 		btnNewButton_1.setBounds(67, 218, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
+		JLabel lblTotal = new JLabel("Total");
+		lblTotal.setBounds(36, 389, 46, 14);
+		contentPane.add(lblTotal);
+		
+		JLabel lblTotalAmount = new JLabel("");
+		lblTotalAmount.setBounds(78, 389, 46, 14);
+		lblTotalAmount.setBorder(new LineBorder(new Color (0,0,0)));
+		contentPane.add(lblTotalAmount);
+		
 		addComponentListener(new ComponentAdapter()
 		{
 			@Override
@@ -102,8 +115,30 @@ public class AdminFrame extends JFrame
 				height = frame.getHeight();
 				// System.out.println("Width: "+ width+ " Height: " + height);
 				((Keypad) (keypad)).resizePanel(width, height);
+				panel.setBounds(getXpos(width,(2.0/3.0))-35, getYpos(height, (1.0/3.0)), 30, getHeight((height - 60) ,(2.0 / 3.0)));				
+				//panel.resize(width, height);
 			}
 		});
 		
+	}
+	private int getHeight(double h, double scale){
+		int temp=(int) (h* scale);
+		//System.out.println(temp);
+		return temp;
+	}
+	private int getWidth(double w, double scale){
+		int temp=(int) (w*scale);
+		//System.out.println(temp);
+		return temp;
+	}
+	private int getXpos(double w, double scale){
+		int temp=(int) (w*scale);
+		//System.out.println(temp);
+		return temp;
+	}
+	private int getYpos(double h, double scale){
+		int temp=(int) (h* scale);
+		//System.out.println(temp);
+		return temp;
 	}
 }

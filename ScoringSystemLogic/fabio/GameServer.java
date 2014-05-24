@@ -55,22 +55,16 @@ public class GameServer
 	public static String ip = "";
 	public static String ipAddress;
 	public static InetSocketAddress insa;
-	/**
-     *
-     */
+	
 	public static ServerSocket server;
-	/**
-     *
-     */
+	
 	public static ArrayList<Socket> listSockets = new ArrayList<Socket>();
-	/**
-     *
-     */
+	
 	public static ArrayList<Integer> listClientsState = new ArrayList<Integer>();
 	
-	/**
-     *
-     */
+	
+	
+	
 	public static boolean checkLogin(String username, String pWord)
 	{
 		/**
@@ -97,7 +91,7 @@ public class GameServer
 		// return true;
 	}
 	
-	public static ArrayList<DataPackage> listData = new ArrayList<DataPackage>();
+	
 	private static Runnable accept = new Runnable()
 	{
 		
@@ -137,6 +131,9 @@ public class GameServer
 								accepted = false;
 								break;
 							}
+							listData.get(0);
+							
+							
 							
 						}
 						ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());

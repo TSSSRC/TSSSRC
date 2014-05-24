@@ -3,6 +3,9 @@ package src.scoringsystem.network.packages;
 
 public class LoginPackage extends DataPackage
 {
+	public LoginPackage(){
+		super();
+	}
 	public LoginPackage(String Username, String Password)
 	{
 		super();
