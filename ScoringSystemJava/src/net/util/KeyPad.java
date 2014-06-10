@@ -95,6 +95,10 @@ public class Keypad extends JPanel
 	
 	public static void output(JButton but, Object outputLocation)
 	{
+		if(totalScore.size() > 9)
+		{
+			return;
+		}
 		if (selected != null && selected instanceof JLabelExt)
 		{
 			((JLabelExt) selected).setText(but.getText());
@@ -167,7 +171,7 @@ public class Keypad extends JPanel
 		double total=0;
 		for(int i=0; i<totalScore.size(); i++){
 			//System.out.println(totalScore.get(i));
-			total+= totalScore.get(i);
+			total += totalScore.get(i);
 		}
 		total = (Math.round((total*10.0)))/10.0;
 		System.out.println(total+"");
