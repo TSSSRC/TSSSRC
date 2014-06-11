@@ -12,4 +12,10 @@ public class TOFJudgePackage extends DataPackage
 		this.addBaseObject("id", ID);
 		this.addBaseObject("score", score);
 	}
+	@Override
+    public void run()
+    {
+	    // TODO Auto-generated method stub
+	    
+    }
 }

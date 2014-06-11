@@ -16,4 +16,10 @@ public class LoginPackage extends DataPackage
 		System.out.println(this.getBaseDataObject("username"));
 		System.out.println(this.getBaseDataObject("password"));
 	}
+	@Override
+    public void run()
+    {
+	    // TODO Auto-generated method stub
+	    
+    }
 }

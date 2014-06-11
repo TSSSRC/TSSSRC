@@ -6,22 +6,20 @@ import java.sql.*;
 
 public class MySQL {
 	private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String user = "root";
-    private static final String password = "nbuser";
-    private static String url = "jdbc:mysql://localhost:3306/";
+    private static final String user = "tssadmin";
+    private static final String password = "tststs01";
+    private static String url = "jdbc:mysql://192.168.7.80/tssDb";
     private static Connection connection;
     private static PreparedStatement statement;
     private static  ResultSet resultSet;
     private static String query;
     public static void main(String[] args){
-    	if(updateValue("tblUsers", "Name,Surname","1", "Fred,Smith")){
-    		
-    	}
+    	insertValue("tblUsers", "username, password, name, acctype, seclevel", "'fabio', 'rexex', 'fabio', 'admin', 3");
     }
     
 	
 	static boolean insertValue(String table, String column, String value){
-		url+=table;	
+		//url+=table;	
 		try {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
@@ -29,16 +27,16 @@ public class MySQL {
             String columns[] = column.split(",");
     		String values[] =  value.split(",");
     		int size = columns.length;
-    		query = "INSERT INTO " + table + " (`";
+    		query = "INSERT INTO " + table + " (";
     		for(int i=0; i<size-1; i++){    			
-    			query += columns[i] + "`, `"; 
+    			query += columns[i] + ", "; 
     		} 
-    		query += columns[size-1] + "`) VALUES (`";
+    		query += columns[size-1] + ") VALUES (";
     		
     		for(int i=0; i<size-1; i++){    			
-    			query += values[i] + "`, `"; 
+    			query += values[i] + ", "; 
     		}
-    		query += values[size-1] + "`);";
+    		query += values[size-1] + ");";
     		//System.out.println(query);
     		statement = connection.prepareCall(query);
             statement.executeUpdate();
@@ -52,7 +50,7 @@ public class MySQL {
         }
 		return false;  
 	}
-	static boolean updateValue(String table, String column, String index, String newValue){
+	static boolean updateValue(String table, String column, String where, String newValue){
 		url+=table;	
 		try {
             Class.forName(driver);
@@ -66,7 +64,7 @@ public class MySQL {
 				
 			}
 			query += columns[newValues.length-1] + " = " + newValues[newValues.length-1];
-			query+= " WHERE Index = " + index;
+			query+= " WHERE " + where;
     		
     		System.out.println(query);
     		statement = connection.prepareCall(query);
@@ -80,13 +78,13 @@ public class MySQL {
         }
 		return false;
 	}
-	static boolean deleteValue(String table, String index){
+	static boolean deleteValue(String table, String where){
 		url+=table;	
 		try {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
             System.out.println("Connection Successful");
-            query = "DELETE FROM "+ table+ " WHERE Index = " +index;
+            query = "DELETE FROM "+ table+ " WHERE " + where;
             statement = connection.prepareCall(query);
             statement.executeUpdate();
             statement.close();   		  		

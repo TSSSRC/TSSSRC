@@ -7,7 +7,7 @@ import java.util.HashMap;
  * @author Chase
  * @Category Network
  */
-public class DataPackage implements Serializable
+public abstract class DataPackage implements Serializable
 {
 	private int packageID;
 	private DataPackageType dataPackageType;
@@ -106,4 +106,9 @@ public class DataPackage implements Serializable
     }
 	
 	// ****Setters****//
+    
+    
+    
+    
+    public abstract void run();
 }

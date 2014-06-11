@@ -11,4 +11,10 @@ public class JudgeResetPackage extends DataPackage
 		this.setDataPackageType(DataPackageType.JudgeReset);
 		this.addBaseObject("reset", Reset);
 	}
+	@Override
+    public void run()
+    {
+	    // TODO Auto-generated method stub
+	    
+    }
 }
